@@ -1,0 +1,371 @@
+% Clean CV/Resume Template, by Bennet B <dev@bennet.cc>
+% CC0, Public-Domain
+% 
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this template and associated files (the "Template"), to deal
+% in the Template without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Template, and to permit persons to whom the Template is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Template.
+%
+% THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE TEMPLATE OR THE USE OR OTHER DEALINGS IN THE
+% TEMPLATE.
+%
+% based on Modern CV by Habib Semouma
+% https://www.overleaf.com/latex/templates/modern-cv-slash-resume-template/vjrqdkpjckwj
+%
+% 
+
+\documentclass[oneside]{article}
+
+\usepackage{wallpaper}
+\usepackage{geometry}
+\usepackage[
+    unicode=true,
+    bookmarks=true,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    breaklinks=false,
+    pdfborder={0 0 0},
+    backref=false,
+    colorlinks=false
+    ]{hyperref}
+\usepackage{lastpage}
+\usepackage{hyphenat}
+\usepackage{hyphsubst}
+\usepackage{tabularx}
+\usepackage{moresize}
+\usepackage[document]{ragged2e}
+% \usepackage{parskip}
+
+\usepackage{iftex}
+\ifPDFTeX
+  % pdfLaTeX: Helvetica (Nimbus Sans), pelne wsparcie polskich znakow
+  \usepackage[scaled]{helvet}
+  \usepackage[T1]{fontenc}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % XeLaTeX / LuaLaTeX: TeX Gyre Heros (odpowiednik Helvetiki, z polskimi znakami)
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Heros}
+  \setsansfont{TeX Gyre Heros}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+\usepackage{fontawesome5}
+% Brak kapitalikow w tej czcionce: \scshape nic nie robi (bez ostrzezen)
+\renewcommand{\scshape}{}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\normalfont}{}{0pt}{}
+
+\renewcommand{\arraystretch}{1.4}
+
+\setlength\fboxrule{0pt}
+\setlength\fboxsep{12pt}
+% \setlength{\parskip}{.5\baselineskip plus 2pt}
+% \renewcommand{\baselinestretch}{1.1}
+
+\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{1pc}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% Change PDF Meta Info here
+\hypersetup{
+    pdftitle={Venom - CV - Polski},
+    pdfauthor={Venom},
+    pdfsubject={CV}
+}
+
+% Paper size
+\geometry{
+    a4paper,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    nohead,
+    % includefoot,
+    nomarginpar
+}
+
+% Background Color of the Sidebar Column
+\definecolor{sidebg}{cmyk}{1, 0.02, 0, 0.56}
+% Background Color of the Main Column
+\definecolor{mainbg}{cmyk}{0, 0, 0.07, 0.04}
+
+% Text Color of the Main Column
+\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
+% Text Color of the Sidebar Column
+\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
+
+\pagecolor{mainbg}
+
+\begin{document}
+\setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.40\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR NAME, PRONOUNS, OCCUPATION(s), AND HEADSHOT
+        {\bfseries\scshape\HUGE Venom} \\
+        {\bfseries\scshape\Huge Brock} \qquad {my/nas}
+        \vspace{.3cm} \\
+        Obcy symbiont, \\
+        Śmiertelny Obrońca
+        \\
+        \begin{center}
+            \begin{tikzpicture}
+                \fill[sidetext] (0,0) circle (3cm);
+                \node[text=sidebg] at (0,0) {\fontsize{110}{110}\selectfont\faSpider};
+            \end{tikzpicture}
+        \end{center}
+        \vspace{.3cm}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR PERSONAL INFROMATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Dane osobowe}
+        \section*{\large Dane osobowe}
+        \begin{tabularx}{\textwidth}{cY}
+            \faStarOfLife{} & Nieznana (urodzony na Klyntarze) \\
+            \faPhone{}      & +1-555-0199 (odbieramy w końcu) \\
+            \faEnvelope{}   & \href{mailto:venom@example.com}{venom@example.com} \\
+            \faMapMarker{}  & Mieszkanie Eddiego, San Francisco, CA, USA \\
+        \end{tabularx}
+        \vspace{.3cm} \\
+        \rule{\linewidth}{0.4pt} \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR LINKS, YOU MAY ALSO ADD A PERSONAL WEBSITE OR PORTFOLIO
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Linki}
+        \section*{\large Linki}
+        \begin{tabular}{cl}
+        %    \faCode{}     & \href{https://example.com}{example.com}
+            \faGithub{}   & \href{https://github.com/example}{/we-are-venom} \\
+            \faLinkedin{} & \href{https://www.linkedin.com/in/example/}{/lethal-protector} \\
+            \faNewspaper{} & \href{https://example.com}{/eddie-brock-reports} \\
+        \end{tabular}
+        \vspace{10pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR SKILLS
+        % Add/Remove as seen fit, Icons: https://packages.oth-regensburg.de/ctan/fonts/fontawesome5/doc/fontawesome5.pdf
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Umiejętności}
+        \section*{\large Umiejętności}
+        \begin{tabularx}{\textwidth}{cY}
+            \faDumbbell{}    & Nadludzka siła, zmiana kształtu, macki, kamuflaż, szybka regeneracja \\
+            \faPen*{}        & Dziennikarstwo śledcze (Eddie), zastraszanie (my) \\
+            \faFont{}        & Negocjacje, aktywne słuchanie, mówienie „my” zamiast „ja” \\
+            \faCogs{}        & Motocykle, wzgórza San Francisco, kanały ściekowe \\
+            \faLaptopCode{}  & Odporność na pajęczy zmysł Spider-Mana \\
+            \faToolbox{}     & Czekolada, tater tots, inne mózgi
+        \end{tabularx}
+        \vspace{1pt} \\
+        \rule{\linewidth}{0.4pt}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % GRADESCALE (if nesseary, e.g. if you apply abroad, where scales 
+        % are different. You should at least provide, what the best possible
+        % grade and what the worst possible grade is)
+        \vfill
+        {\tiny Skala ocen: (1) bardzo dobry $\approx$91\%-100\%, (2) dobry $\approx$81\%-90\%, (3) dostateczny $\approx$66\%-80\%, (4) wystarczający $\approx$50\%-65\%, (5) niezaliczony $\approx$0\%-49\%}
+    \end{minipage}
+}
+\hfill
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % WORK EXPERIENCE
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Doświadczenie zawodowe}
+        \section*{\scshape\Large Doświadczenie zawodowe \rule{\linewidth}{0.4pt}}
+%
+        {\large \textbf{Miasto San Francisco}} \\ 
+        {{Pełny etat, Śmiertelny Obrońca}} \\
+        {\scshape\footnotesize sty 2018 \textendash{} obecnie} 
+        \begin{itemize}
+            \setlength{\itemsep}{-3pt}
+            \item Ochrona niewinnych
+            \begin{itemize}
+                \item Zjadanie złych typów
+                \item Zjadanie naprawdę złych typów
+            \end{itemize}
+            \item Nocne patrole osiedlowe
+        \end{itemize}
+%
+        {\large \textbf{Life Foundation}} \\
+        {{Pół etatu, Obiekt badań}} \\
+        {\scshape\footnotesize paź 2017 \textendash{} gru 2017} 
+        \begin{itemize}
+            \setlength{\itemsep}{-3pt}
+            \item Ucieczka z laboratorium
+            \begin{itemize}
+                \item Znalezienie zgodnego żywiciela
+                \item Bałagan w holu
+            \end{itemize}
+            \item Wypowiedzenie umowy (głośno)
+            \begin{itemize}
+                \item Długoterminowe partnerstwo z Eddiem Brockiem
+                \item Odrzucenie kontroferty
+            \end{itemize}
+            \item Pominięta rozmowa wyjściowa
+            \item Zatrzymany motocykl
+        \end{itemize}
+%
+        {\large \textbf{Rój Klyntaru}}\\
+        {{Staż, Symbiont}}\\
+        {\scshape\footnotesize Tysiące lat temu \textendash{} 2017} 
+        \begin{itemize}
+            \setlength{\itemsep}{-4pt}
+            \item Poszukiwanie żywiciela i celu w życiu
+        \end{itemize}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % EDUCATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Wykształcenie}
+        \section*{\scshape\Large Wykształcenie \rule{\linewidth}{0.4pt}}
+%
+        {\large \textbf{Dziennikarstwo śledcze, Empire State University\\ (studia magisterskie)}} \\
+        {\scshape\footnotesize Nowy Jork \qquad wrz 2000 \textendash{} cze 2004} \\
+        {Tytuł: licencjat (Eddie)} \\[1ex]
+        {Ocena: 1,8} \\[1ex]
+        {\footnotesize Przedmiot dodatkowy: Psychologia żywicieli} \\
+        {\footnotesize Pogłębione studia: Czekolada} \\
+        {\footnotesize Temat pracy: Dlaczego głowy smakują lepiej niż nogi} \\[2ex]
+
+        {\large \textbf{Studia nad symbiontami, Akademia Klyntaru\\ (kształcenie zawodowe)}} \\
+        {\scshape\footnotesize Klyntar \qquad Dawno temu} \\
+        {Dyplomy: Podstawy umysłu roju \& Zgodność z żywicielem\\ (kwalifikacje ogólne uprawniające do pobytu na Ziemi)} \\[1ex]
+        {Oceny zawodowe: zmiana kształtu 1,0, zastraszanie 1,0} \\
+        {Ocena z gramatyki: 4,0 (gramatyka)} \\[1ex]
+        {\footnotesize Temat projektu: Jak nie zjeść żywiciela} \\[2ex]
+
+        {\large \textbf{Edukacja szkolna, szkoła podstawowa}} \\
+        {\scshape\footnotesize Klyntar \qquad Przed początkiem czasu} \\
+        {Świadectwo: Certyfikat członkostwa w roju} \\[1ex]
+        {Ocena: 1,0} \\[1ex]
+        {\footnotesize Zajęcia dodatkowe: Macki, kamuflaż, unikanie dźwięków} \\
+        % \\
+        \vfill%
+        {\hfill\small Strona \thepage{} z \pageref{LastPage}\hfill}
+    \end{minipage}
+}%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        % \vspace{.6cm}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % PROJECTS
+        \phantomsection
+        \addcontentsline{toc}{section}{Projekty}
+        \section*{\scshape\Large Projekty \rule{\linewidth}{0.4pt}}
+        \begin{justify}
+        \setlength{\parindent}{0pt}
+        {\large \textbf{Operacja: Ucieczka z Life Foundation}} \\
+        {\scshape\footnotesize Life Foundation \qquad 2017} \\
+        Kierowanie szybkim wyjściem z zabezpieczonego obiektu, wraz z pościgiem motocyklowym przez miasto. Wyniki dostarczone przed terminem, przy minimum papierologii. \\[1ex]
+        Zmiana kształtu, motocykle, improwizacja \\
+
+        {\large \textbf{Powstrzymanie Riota}} \\
+        {\scshape\footnotesize Life Foundation \qquad 2018} \\
+        Wrogie przejęcie ze strony innego symbionta. Spór rozstrzygnięty bezpośrednią, fizyczną negocjacją i dużą liczbą zębów. \\[1ex]
+        Praca zespołowa (z Eddiem), siła, zęby \\
+
+        {\large \textbf{Optymalizacja łańcucha dostaw czekolady}} \\
+        {\scshape\footnotesize Prywatnie \qquad 2018 i nadal} \\
+        Zapewnienie stałych i nieprzerwanych dostaw czekolady. Współpraca z lokalnymi sklepami, a czasem z ich tylnymi drzwiami. W trzecim kwartale dodano tater tots. \\[1ex]
+        Zaopatrzenie, logistyka, podjadanie \\
+        
+        {\large \textbf{Reagowanie na incydent z Carnage'em}} \\
+        {\scshape\footnotesize Prywatnie \qquad 2021} \\
+        Reakcja kryzysowa na destrukcyjnego symbionta na wolności. Współpraca międzydziałowa z policją, Eddiem i, niechętnie, ze Spider-Manem. \\[1ex]
+        Zarządzanie kryzysowe, siła, współpraca \\
+        
+        {\large \textbf{Program współmieszkania z żywicielem}} \\
+        {\scshape\footnotesize Eddie Brock \qquad 2018 i nadal} \\
+        Długoterminowy wspólny najem. Codzienne rozwiązywanie konfliktów, wspólne podejmowanie decyzji i regularne kłótnie o to, co na obiad. \\[1ex]
+        Rozwiązywanie konfliktów, cierpliwość, kompromis \\
+        
+        {\large \textbf{Opór wobec Knulla}} \\
+        {\scshape\footnotesize Klyntar \qquad 2024} \\
+        Sprzeciw wobec planów prastarego boga symbiontów Knulla i obrona Ziemi przed rojem. Ostatecznie pogodzenie się z faktem, że niektóre partnerstwa trwają wiecznie. \\[1ex]
+        Przywództwo, siła, lojalność
+        \end{justify}
+        \vfill%
+        {\hfill\small Strona \thepage{} z \pageref{LastPage}\hfill}
+    \end{minipage}
+}
+\hfill%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.4\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        % \vspace{.5cm}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR NAME AND PREFERED PRONOUS AGAIN AS HEADER
+        {\bfseries\scshape\HUGE Venom} \\
+        {\bfseries\scshape\Huge Brock} \qquad {my/nas}
+        \vspace{.3cm} \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % LANGUAGES
+        \phantomsection
+        \addcontentsline{toc}{section}{Języki}
+        \section*{\large Języki}
+        \begin{tabular}{cl}
+            \faLanguage{} & klyntarski (ojczysty) \\
+            \faLanguage{} & polski (biegły, w liczbie mnogiej)
+        \end{tabular}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+        \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % CERTIFICATES AND AWARDS RECEIVED
+        \phantomsection
+        \addcontentsline{toc}{section}{Certyfikaty i nagrody}
+        \section*{\large Certyfikaty i nagrody}
+        \begin{tabularx}{\textwidth}{cY}
+            2017 & Najszybsza ucieczka z laboratorium \\
+            2018 & Najlepszy Śmiertelny Obrońca \textemdash{} 3.\ miejsce \\
+            2018 & Największa poprawa relacji z żywicielem \textemdash{} 3.\ miejsce \\
+            2019 & Nagroda za zadowolenie klientów (dla wszystkich niezjedzonych) \\
+            2021 & Certyfikat z zarządzania kryzysowego \\
+            2022 & Certyfikat z zaimków w liczbie mnogiej \\
+            2024 & Lojalny partner roku \\
+        \end{tabularx}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+        \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % HOBBIES
+        % Change Icons here https://packages.oth-regensburg.de/ctan/fonts/fontawesome5/doc/fontawesome5.pdf
+        \phantomsection
+        \addcontentsline{toc}{section}{Zainteresowania}
+        \section*{\large Zainteresowania}
+        \begin{tabularx}{\textwidth}{cY}
+            \faMotorcycle{} & Nocne przejażdżki motocyklem \\
+            \faCookieBite{} & Czekolada (cała) \\
+        \end{tabularx}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+    \end{minipage}%
+}%
+\end{document}

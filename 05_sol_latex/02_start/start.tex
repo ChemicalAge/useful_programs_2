@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Kodowanie i język ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,polish]{babel} % główny język: polski
+\usepackage{lmodern}
+
+% --- Układ strony ---
+\usepackage[margin=2.5cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+% --- Pakiety pomocnicze ---
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem} % \sout (przekreślenie)
+\usepackage{graphicx}
+\usepackage[colorlinks=true,urlcolor=blue!60!black]{hyperref}
+\usepackage{fancyvrb}
+\fvset{frame=single,framesep=3mm,fontsize=\small}
+
+\begin{document}
+
+\section{Tytuł}
+
+\subsubsection{The Ferrari}
+
+SF-26, also known by its internal name Project 678, is a Formula One car designed and built by \textbf{Scuderia Ferrari} to \sout{compete} drive in the 2026 Formula One World Championship. It is currently being driven by Charles Leclerc and seven-time World Drivers' Champion Lewis Hamilton in their eighth and second seasons with Ferrari, respectively.
+
+\subsubsection{The 2026 Austrian Grand Prix}
+
+\textit{(officially known as the Formula 1 Lenovo Austrian Grand Prix 2026)} was a Formula One motor race held on 28 June 2026 at the Red Bull Ring in Spielberg, Austria. It was the eighth round of the 2026 Formula One World Championship.
+
+\subsection{Rodents}
+
+\begin{itemize}
+  \item Chinchilla
+  \item Rat
+  \item Jerry
+\end{itemize}
+
+\subsection{Elements(Avatar)}
+
+\begin{enumerate}
+  \item Fire
+  \item Water
+  \item Earth
+\end{enumerate}
+
+\subsection{Cheeses that can be used for pizza}
+
+\begin{itemize}[label={}]
+  \item[$\boxtimes$] Mozarella
+  \item[$\boxtimes$] Gauda
+  \item[$\boxtimes$] Edam
+  \item[$\square$] Camembert
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Studio} & \textbf{Plot Conflict} & \textbf{Quality} \\
+\midrule
+Disney & Indivdual trivial issues & 4/10 \\
+Pixar & Deep trauma & 8/10 \\
+Illumination & Yellow folks searching their master & 10/10 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Google Colab}
+
+\texttt{http://colab.research.google.com}
+
+\subsection{Krótki kod Phyton}
+
+\begin{Verbatim}
+a="Hallo"
+Print(a)
+\end{Verbatim}
+
+\subsection{Wzory}
+
+$E=mc^2$
+
+$(a+b)^2=a^2+2ab+b^2$
+
+$a^2-b^2=(a-b)(a+b)$
+
+\subsection{Wzory 2}
+
+\[
+\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}
+\]
+
+\[
+\sqrt{a^2+b^2} = c
+\]
+
+\[
+a^r \cdot a^s = a^{r+s}
+\]
+
+\subsection{Obrazek}
+
+\begin{center}
+\IfFileExists{wykres.png}{%
+  \includegraphics[width=1\textwidth]{wykres.png}%
+}{%
+  \fbox{\parbox{0.7\textwidth}{\centering\small [brak pliku \texttt{wykres.png}]\\ Wykres}}%
+}
+\end{center}
+
+\end{document}
